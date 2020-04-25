@@ -1,0 +1,13 @@
+[user]
+	name = Francisco José López Yuste
+	email = f.lopezyuste@accenture.com
+[core]
+	excludesfile = /Users/f.lopezyuste/.gitignore_global
+[difftool "sourcetree"]
+	cmd = /usr/local/bin/bcomp \"$LOCAL\" \"$REMOTE\"
+	path = -ro
+[mergetool "sourcetree"]
+	cmd = /usr/local/bin/bcomp \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/f.lopezyuste/.stCommitMsg
