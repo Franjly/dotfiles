@@ -86,7 +86,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'tmsvg/pear-tree'
 Plug 'tpope/vim-repeat'
-" Plug 'vifm/vifm.vim'
+Plug 'vifm/vifm.vim'
 
 " Visual tools
 Plug 'itchyny/lightline.vim'
@@ -157,11 +157,11 @@ autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIFM
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" map <Leader>vv :Vifm<CR>
-" map <Leader>vs :VsplitVifm<CR>
-" map <Leader>sp :SplitVifm<CR>
-" map <Leader>dv :DiffVifm<CR>
-" map <Leader>tv :TabVifm<CR>
+map <Leader>vv :Vifm<CR>
+map <Leader>vs :VsplitVifm<CR>
+map <Leader>sp :SplitVifm<CR>
+map <Leader>dv :DiffVifm<CR>
+map <Leader>tv :TabVifm<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
