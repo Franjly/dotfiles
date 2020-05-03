@@ -110,6 +110,7 @@ Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'rakr/vim-one'
 Plug 'joshdick/onedark.vim'
 Plug 'jacoborus/tender.vim'
+Plug 'chriskempson/base16-vim'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
