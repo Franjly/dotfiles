@@ -1,4 +1,13 @@
 #===============================================================================
+# Tmux
+#===============================================================================
+# if [ -z "$TMUX" ]
+# then
+    # tmux attach -t TMUX || tmux new -s TMUX
+# fi
+
+
+#===============================================================================
 # Powerlevel10k - Instant prompt
 #===============================================================================
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -7,15 +16,6 @@
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-
-
-#===============================================================================
-# Tmux
-#===============================================================================
-# if [ -z "$TMUX" ]
-# then
-#     tmux attach -t TMUX || tmux new -s TMUX
-# fi
 
 
 #===============================================================================
@@ -30,14 +30,14 @@ export LC_ALL=es_ES.UTF-8
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-export EDITOR='vim'
-export VISUAL='vim'
+export EDITOR='nvim'
+export VISUAL='nvim'
 # if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-#   export VISUAL='vim' 
+#   export EDITOR='nvim'
+#   export VISUAL='nvim' 
 # else
-#   export EDITOR='vim'
-#   export VISUAL='vim' 
+#   export EDITOR='nvim'
+#   export VISUAL='nvim' 
 # fi
 
 export TERM=xterm-256color
@@ -95,6 +95,9 @@ alias 'sslyze'='docker run --rm -it nablac0d3/sslyze'
 # alias vim
 alias 'vim'='nvim'
 alias 'lvim'='\vim'
+
+# alias exit
+alias ':q'='exit'
 
 
 #===============================================================================
@@ -216,3 +219,27 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 iterm2_print_user_vars() {
     it2git
 }
+
+
+#===============================================================================
+# exa
+#===============================================================================
+# alias exa
+alias ls='exa --group-directories-first --classify'
+alias l='exa --group-directories-first --classify'
+alias la='exa -al --group-directories-first --classify'
+alias ll='exa -l --group-directories-first --classify'
+alias lt='exa -l -s=modified --group-directories-first --classify'
+alias lta='exa -al -s=modified --group-directories-first --classify'
+alias lrt='exa -l -s=modified -r --group-directories-first --classify'
+alias lrta='exa -al -s=modified -r --group-directories-first --classify'
+
+# alias lla='exa -al --group-directories-first --classify'
+# alias lal='exa -al --group-directories-first --classify'
+# alias lt='exa -T --group-directories-first --classify'
+# alias lta='exa -aT --group-directories-first --classify'
+# alias lat='exa -aT --group-directories-first --classify'
+
+
+#===============================================================================
+
