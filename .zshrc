@@ -242,4 +242,39 @@ alias lrta='exa -al -s=modified -r --group-directories-first --classify'
 
 
 #===============================================================================
+# Functions
+#===============================================================================
+# Git add, commit & push
+function git_prepare() {
+    if [ -n "$BUFFER" ];
+        then
+		    BUFFER="git add -A && git commit -m \"$BUFFER\" && git push"
+	fi
+
+	if [ -z "$BUFFER" ];
+		then
+		    BUFFER="git add -A && git commit -v && git push"
+	fi
+				
+	zle accept-line
+}
+
+# Home - Navigates to the current root workspace
+function git_root() {
+    BUFFER="cd $(git rev-parse --show-toplevel || echo ".")"
+	zle accept-line
+}
+
+
+#===============================================================================
+# Key bindings
+#===============================================================================
+zle -N git_prepare
+bindkey "^g" git_prepare
+
+zle -N git_root
+bindkey "^h" git_root
+
+
+#===============================================================================
 
